@@ -1,0 +1,77 @@
+Задание 1
+
+list = ['Простая строка', 100, 0.5, False, [2, 4, 6], ('превед', 'медвед'), {'name':'John', 'age':'30'}]
+def list_type(any):
+    for any in range(len(list)):
+        print(type(list[any]))
+    return
+list_type(list)
+
+Задание 2
+
+count = int(input('Введите кол-во элементов списка '))
+list = []
+i = 0
+any = 0
+while i < count:
+    list.append(input('Введите следующее значение списка '))
+    i += 1
+for any in range(int(len(list)/2)):
+        list[any], list[any + 1] = list[any + 1], list[any]
+        any += 2
+print(list)
+
+Задание 3
+
+seasons_list = ['Зима', 'Весна', 'Лето', 'Осень']
+seasons_dict = {1 : 'Зима', 2 : 'Весна', 3 : 'Лето', 4 : 'Осень'}
+month = int(input("Введите номер месяца >>> "))
+if month ==1 or month == 12 or month == 2:
+    print(seasons_list[0])
+    print(seasons_dict.get(1))
+elif month == 3 or month == 4 or month ==5:
+    print(seasons_list[1])
+    print(seasons_dict.get(2))
+elif month == 6 or month == 7 or month == 8:
+    print(seasons_list[2])
+    print(seasons_dict.get(3))
+elif month == 9 or month == 10 or month == 11:
+    print(seasons_list[3])
+    print(seasons_dict.get(4))
+else:
+    print('Такого месяца не существует')
+    
+    Задание 4
+    
+    user_str = input('введите строку из нескольких слов, слова разделяйте пробелами >>> ')
+user_words = []
+num = 1
+for el in range(user_str.count(' ') + 1):
+    user_words = user_str.split()
+    if len(str(user_words)) <= 10:
+        print(f'{num} {user_words[el]}')
+        num += 1
+    else:
+        print(f'{num} {user_words[el] [0:10]}')
+        num += 1
+        
+  Задание 5
+  
+  rating = [7, 5, 3, 3, 2]
+print(f'Существующий рейтинг >>> {rating}')
+user_digit = int(input("Введите число "))
+for el in range(len(rating)):
+    if rating[el] == user_digit:
+            rating.insert(el +1, user_digit)
+            break
+    elif rating[0] < user_digit:
+            rating.insert(0, user_digit)
+    elif rating[-1] > user_digit:
+            rating.append(user_digit)
+    elif rating[el] > user_digit and rating[el + 1] < user_digit:
+            rating.insert(el + 1, user_digit)
+print(f'текущий рейтинг >>> {rating}')
+
+Задание 6
+
+Не успел довести до ума, есть только наброски. Обязательно доделаю, но время на исходе
